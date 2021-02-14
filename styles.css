@@ -1,37 +1,93 @@
-*{
- padding:0;
- margin:0;
- box-sizing: border-box;
- font-family: 'Kumbh Sans', sans-serif;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
-html,body{
-    height:100%;
+html, body {
+    height: 100%;
 }
-body{
-    height:100%;
-    background-image:linear-gradient(hsl(272, 18%, 71%),hsl(240, 73%, 65%)) ;
-    color:hsl(237, 12%, 33%);
+
+body {
+    font-size: 12px;
+    font-weight: 400;
+    height: 100%;
+    background-image: linear-gradient(hsl(272, 18%, 71%), hsl(240, 73%, 65%));
+    color: hsl(240, 6%, 50%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main{
+main {
     background-color: white;
-    background-image: url(images/bg-pattern-desktop.svg);
-    display:flex;
+    display: flex;
     width: 920px;
     height: 510px;
     border-radius: 20px;
     align-items: center;
 }
-.close{
+
+.imagesContainer {
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right;
+    position: relative;
+    width: 42%;
+    height: 100%;
+}
+
+.imageBox {
+    position: absolute;
+    top: 200px;
+    left: -125px;
+}
+
+.imageOnlineContainer {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.imageOnline {
+    position: absolute;
+    top: 55px;
+    left: -100px;
+}
+
+h1{
+    color: hsl(238, 29%, 16%)
+}
+.qaContainer {
+    border-bottom: hsl(240, 5%, 91%) solid 1px;
+    margin: 1em 0;
+}
+
+.qaContainer div:hover {
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+.close p {
     display: none;
 }
-.open{
-    display:block;
+
+.question {
+    font-size: 1.2em;
 }
-.openArrow{
+
+.open p {
+    display: block;
+}
+
+.open .question {
+    font-weight: 700;
+    color: hsl(238, 29%, 16%)
+}
+
+.open img {
     transform: rotate(180deg);
 }
