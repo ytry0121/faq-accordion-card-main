@@ -19,34 +19,44 @@
         <img class="image-online" src="images/illustration-woman-online-desktop.svg" />
         <img class="image-onlineM" src="images/illustration-woman-online-mobile.svg" />
       </div>
-        <img class="image-box" src="images/illustration-box-desktop.svg" />
+      <img class="image-box" src="images/illustration-box-desktop.svg" />
     </div>
     <div class="faq-section">
       <h1>FAQ</h1>
       <div class="qa-container">
-      <div class="qa-item close">
-        <div class="question">How many team members can I invite?<span class="icon-arrow"><img src="images/icon-arrow-down.svg" /></span></div>
-        <p>You can invite up to 2 additional users on the Free plan. There is no limit on
-          team members for the Premium plan.</p>
-      </div>
-      <div class="qa-item close">
-        <div class="question"> What is the maximum file upload size?<span class="icon-arrow"><img src="images/icon-arrow-down.svg" /></span></div>
-        <p> No more than 2GB. All files in your account must fit your allotted storage space.</p>
-      </div>
-      <div class="qa-item close">
-        <div class="question"> How do I reset my password?<span class="icon-arrow"><img src="images/icon-arrow-down.svg" /></span></div>
-        <p> Click “Forgot password” from the login page or “Change password” from your profile page.
-          A reset link will be emailed to you.</p>
-      </div>
-      <div class="qa-item close">
-        <div class="question"> Can I cancel my subscription?<span class="icon-arrow"><img src="images/icon-arrow-down.svg" /></span></div>
-        <p> Yes! Send us a message and we’ll process your request no questions asked.</p>
-      </div>
-      <div class="qa-item close">
-        <div class="question"> Do you provide additional support?<span class="icon-arrow"><img src="images/icon-arrow-down.svg" /></span></div>
-        <p> Chat and email support is available 24/7. Phone lines are open during normal business
-          hours.</p>
-      </div>
+        <div class="qa-item close">
+          <div class="question">How many team members can I invite?
+            <span class="icon-arrow"><img src="images/icon-arrow-down.svg" /></span>
+          </div>
+          <p>You can invite up to 2 additional users on the Free plan. There is no limit on
+            team members for the Premium plan.</p>
+        </div>
+        <div class="qa-item close">
+          <div class="question"> What is the maximum file upload size?
+            <span class="icon-arrow"><img src="images/icon-arrow-down.svg" /></span>
+          </div>
+          <p> No more than 2GB. All files in your account must fit your allotted storage space.</p>
+        </div>
+        <div class="qa-item close">
+          <div class="question"> How do I reset my password?
+            <span class="icon-arrow"><img src="images/icon-arrow-down.svg" /></span>
+          </div>
+          <p> Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.</p>
+        </div>
+        <div class="qa-item close">
+          <div class="question"> Can I cancel my subscription?
+            <span class="icon-arrow"><img src="images/icon-arrow-down.svg" /></span>
+          </div>
+          <p> Yes! Send us a message and we’ll process your request no questions asked.</p>
+        </div>
+        <div class="qa-item close">
+          <div class="question"> Do you provide additional support?
+            <span class="icon-arrow"><img src="images/icon-arrow-down.svg" /></span>
+          </div>
+          <p> Chat and email support is available 24/7. Phone lines are open during normal business
+            hours.</p>
+        </div>
       </div>
     </div>
   </main>
@@ -54,10 +64,10 @@
   <script>
     function handleClick(q) {
       console.log(q.classList)
-      if(q.classList.contains('close')){
+      if (q.classList.contains('close')) {
         q.classList.add('open')
         q.classList.remove('close')
-      }else{
+      } else {
         q.classList.remove('open')
         q.classList.add('close')
       }
