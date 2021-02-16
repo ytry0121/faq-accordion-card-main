@@ -1,3 +1,13 @@
+/* Common Styles */
+:root{
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+--soft-red: hsl(14, 88%, 65%);
+--soft-violet: hsl(273, 75%, 66%);
+--soft-blue: hsl(240, 73%, 65%);
+--very-dark-grayish-blue: hsl(237, 12%, 33%);
+--dark-grayish-blue: hsl(240, 6%, 50%);
+--light-grayish-blue: hsl(240, 5%, 91%);
+}
 * {
     padding: 0;
     margin: 0;
@@ -7,18 +17,21 @@
 
 html, body {
     height: 100%;
+    min-height: 760px;
 }
 
 body {
     font-size: 12px;
     font-weight: 400;
-    height: 100%;
-    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-    color: hsl(240, 6%, 50%);
+    background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--dark-grayish-blue);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 main {
     background-color: white;
@@ -30,39 +43,44 @@ main {
     align-items: center;
 }
 
-.imagesContainer {
+/* Images section */
+
+.images-container {
     background-image: url(images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 100% 65%;
+    background-position: 114% 65%;
     position: relative;
-    width: 42%;
+    width: 50%;
     height: 100%;
 }
 
-.imageBox {
+.image-box {
     position: absolute;
     top: 205px;
     left: -90px;
 }
 
-.imageOnlineContainer {
+.imageonline-container {
     position: absolute;
     overflow: hidden;
     width: 100%;
     height: 100%;
 }
 
-.imageOnline {
+.image-online {
     position: absolute;
     top: 70px;
     left: -85px;
 }
-.imageOnlineM{
+
+.image-onlineM {
     display: none;
 }
 
-.faqSection {
+/* FAQ Section */
+
+.faq-section {
     width: 350px;
     height: 100%;
     margin-right: 100px;
@@ -70,11 +88,11 @@ main {
 }
 
 h1 {
-    color: hsl(238, 29%, 16%);
+    color: var(--very-dark-desaturated-blue);
     font-size: 2rem;
 }
 
-.qaContainers {
+.qa-container {
     display: flex;
     flex-direction: column;
     margin-top: 23px;
@@ -82,17 +100,17 @@ h1 {
     overflow: scroll;
 }
 
-.qaContainer {
-    border-bottom: hsl(240, 5%, 91%) solid 1px;
+.qa-item {
+    border-bottom: var(--light-grayish-blue) solid 1px;
     padding-bottom: 15px;
 }
 
-.iconArrow {
+.icon-arrow {
     float: right;
 }
 
 .close .question:hover {
-    color: hsl(14, 88%, 65%);
+    color: var(--soft-red);
     cursor: pointer;
 }
 
@@ -115,57 +133,75 @@ h1 {
 
 .open .question {
     font-weight: 700;
-    color: hsl(238, 29%, 16%)
+    color: var(--very-dark-grayish-blue)
 }
 
 .open img {
     transform: rotate(180deg);
 }
 
+/* Mobile version */
+
 @media screen and (max-width:950px) {
-    body{
+    /* body {
         margin-top: 100px;
-    }
+    } */
     main {
         width: 80%;
-        min-width: 325px;
-        height: 70%;
-        min-height:535px;
+        min-width: 326px;
+        min-height: 535px;
         flex-direction: column;
     }
-    .imagesContainer {
-        background-image: url(images/bg-pattern-mobile.svg);
-        background-position: center 0%;
-        position:unset;
+    .images-container {
+        background:none;
+        /* background-position: center 0%;
+        position: unset; */
         width: 100%;
+        height: 35%;
     }
-    .imageBox {
+    .image-box {
         display: none;
     }
-    .imageOnlineContainer {
-        position:unset;
+    .imageonline-container {
+        position: relative;
         overflow: unset;
         width: 100%;
     }
-    .imageOnline {
+    .image-online {
         display: none;
     }
-    .imageOnlineM{
+    .image-onlineM {
+        background-image: url(images/bg-pattern-mobile.svg);
+        background-position: 25px 100%;
+        background-repeat: no-repeat;
         display: block;
         margin: 0 auto;
         padding-right: 25px;
+        padding-bottom: 15px;
         position: absolute;
-        text-align: center;
-        bottom: 0px;
         left: 0;
         right: 0;
-        top: 60px;
+        top: -105px;
     }
-    .faqSection{
-        margin:0;
-        padding: 0;
+    .faq-section {
+        margin: 0;
+        padding: 0 35px;
     }
-    h1{
+    h1 {
         text-align: center;
+    }
+    .qa-container{
+        height: 300px;
+    }
+    .question{
+        margin-right:0;
+    }
+    .open p{
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width:500px){
+    .question{
+        font-size: 13px;
     }
 }
